@@ -19,7 +19,12 @@ for (const file of eventFiles) {
 }
 
 // Commands
-// TODO: Ideas for commands: auto counting channel moderation, auto maymays moderation, counter slash command, counter
+// TODO: Ideas for commands:
+//  auto counting channel moderation,
+//  auto maymays moderation,
+//  counter slash command,
+//  counter modal/gui
+//  quotes {add, random, random from user}
 // w/ select + text fields
 client.commands = new Collection();
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
@@ -31,7 +36,7 @@ for (const file of commandFiles) {
 
 // Run a single time when ready
 client.once('ready', () => {
-  Tags.sync({force: true});
+  Tags.sync();
 });
 
 client.on('interactionCreate', async interaction => {

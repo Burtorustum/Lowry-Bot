@@ -78,10 +78,11 @@ export async function execute(interaction) {
       return interaction.reply(`Counter ${counter.name} added.`);
     } catch (error) {
       if (error.name === 'SequelizeUniqueConstraintError') {
-        return interaction.reply('That counter already exists.', {ephemeral: true});
+        return interaction.reply({content: 'That counter already exists.', ephemeral: true});
       }
 
-      return interaction.reply('Something went wrong with adding a counter: tell rob he sucks', {ephemeral: true});
+      return interaction.reply(
+          {content: 'Something went wrong with adding a counter: tell rob he sucks', ephemeral: true});
     }
   } else {
     const countName = interaction.options.getString('name');
@@ -103,6 +104,6 @@ export async function execute(interaction) {
       }
     }
 
-    return interaction.reply('No counter with name ' + name, {ephemeral: true});
+    return interaction.reply({content: 'No counter with name ' + name, ephemeral: true});
   }
 }
