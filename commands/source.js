@@ -5,5 +5,5 @@ export const data = new SlashCommandBuilder()
     .setDescription('Links to the repo');
 
 export async function execute(interaction) {
-  await interaction.reply({content: 'https://github.com/Burtorustum/Lowry-Bot', ephemeral: true});
+  return await interaction.reply({content: 'https://github.com/Burtorustum/Lowry-Bot', ephemeral: true});
 }

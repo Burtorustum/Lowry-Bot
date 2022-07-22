@@ -1,5 +1,5 @@
 import {SlashCommandBuilder} from '@discordjs/builders';
-import {Tags} from '../sequelize.js';
+import CounterModel from '../database/counter-model.js';
 
 export const data = new SlashCommandBuilder()
     .setName('counter')
@@ -63,22 +63,22 @@ export const data = new SlashCommandBuilder()
 
 export async function execute(interaction) {
   if (interaction.options.getSubcommand() === 'create') {
-    const tagName = interaction.options.getString('name');
-    const tagDescription = interaction.options.getString('description');
+    const counterName = interaction.options.getString('name');
+    const counterDescription = interaction.options.getString('description');
     const initialVal = interaction.options.getInteger('initial');
 
     try {
       // equivalent to: INSERT INTO tags (name, description, username) values (?, ?, ?);
-      const counter = await Tags.create({
-        name: tagName,
-        description: tagDescription,
+      const counter = await CounterModel.create({
+        name: counterName,
+        description: counterDescription,
         count: initialVal | 0
       });
 
       return interaction.reply(`Counter ${counter.name} added.`);
     } catch (error) {
       if (error.name === 'SequelizeUniqueConstraintError') {
-        return interaction.reply({content: 'That counter already exists.', ephemeral: true});
+        return interaction.reply({content: `Counter \"${counterName}\" already exists.`, ephemeral: true});
       }
 
       return interaction.reply(
@@ -89,21 +89,23 @@ export async function execute(interaction) {
     const val = interaction.options.getInteger('val');
 
     // TODO: restructure w/ .then instead of await
-    const counter = await Tags.findOne({where: {name: countName}});
+    const counter = await CounterModel.findOne({where: {name: countName}});
     if (counter) {
       if (interaction.options.getSubcommand() === 'get') {
         return interaction.reply('Count of ' + countName + ': ' + await counter.get('count'));
       } else if (interaction.options.getSubcommand() === 'increment') {
         await counter.increment('count', {by: (val | 1)});
         return interaction.reply(
-            countName + '\'s value is now: ' + await (await Tags.findOne({where: {name: countName}})).get('count'));
+            countName + '\'s value is now: ' + await (await CounterModel.findOne({where: {name: countName}})).get(
+                'count'));
       } else if (interaction.options.getSubcommand() === 'decrement') {
         await counter.decrement('count', {by: (val | 1)});
         return interaction.reply(
-            countName + '\'s value is now: ' + await (await Tags.findOne({where: {name: countName}})).get('count'));
+            countName + '\'s value is now: ' + await (await CounterModel.findOne({where: {name: countName}})).get(
+                'count'));
       }
     }
 
-    return interaction.reply({content: 'No counter with name ' + name, ephemeral: true});
+    return interaction.reply({content: `No counter with name \"${countName}\"`, ephemeral: true});
   }
 }

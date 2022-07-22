@@ -5,12 +5,12 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
-    "start": "node .",
+    "start": "nodemon .",
     "pm2 start": "pm2 start app.js --watch",
     "pm2 stop": "pm2 stop app.js",
     "pm2 log": "pm2 log app.js --lines 100",
-    "deploy": "node deploy-commands.js",
-    "retract": "node retract-commands.js"
+    "deploy": "node helperScripts/deploy-commands.js",
+    "retract": "node helperScripts/retract-commands.js"
   },
   "repository": {
     "type": "git",
@@ -30,5 +30,8 @@
     "dotenv": "^16.0.1",
     "sequelize": "^6.21.3",
     "sqlite3": "^5.0.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
   }
 }
