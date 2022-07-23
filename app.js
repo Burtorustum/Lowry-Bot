@@ -9,7 +9,7 @@ const client = new Client({
     status: 'online',
     afk: false,
     activities: [{
-      name: 'Searching for my scissors :scissors:',
+      name: 'Searching for my scissors ✂️',
       type: ActivityType.Playing,
     }]
   }
