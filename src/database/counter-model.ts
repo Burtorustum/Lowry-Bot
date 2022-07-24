@@ -1,14 +1,14 @@
-import * as Sequelize from 'sequelize';
+import {INTEGER, STRING} from 'sequelize';
 import sequelizeModel from './define-sequelize-model.js';
 
 const CounterModel = sequelizeModel.define('counters', {
   name: {
-    type: Sequelize.STRING,
+    type: STRING,
     unique: true,
   },
-  description: Sequelize.STRING,
+  description: STRING,
   count: {
-    type: Sequelize.INTEGER,
+    type: INTEGER,
     defaultValue: 0,
     allowNull: false,
   },

@@ -1,22 +1,18 @@
 import {REST} from "@discordjs/rest";
 import {Routes} from 'discord-api-types/v10';
 import {config} from "dotenv";
-import fs from 'fs';
-import path from 'path';
-import url from 'url';
+import CommandList from '../src/CommandList.js';
 
 config();
 
 const commands = [];
-const commandsPath = path.join(url.fileURLToPath(new URL('.', import.meta.url)), 'commands');
-const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
-
-for (const file of commandFiles) {
-  const command = await import('./commands/' + file);
+for (const command of CommandList.values()) {
   commands.push(command.data.toJSON());
 }
 
+// @ts-ignore
 const rest = new REST().setToken(process.env.DISCORD_TOKEN);
+// @ts-ignore
 rest.put(Routes.applicationCommands(process.env.APP_ID), {body: commands})
     .then(() => console.log('Successfully registered application commands.'))
     .catch(console.error);
