@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "nodemon src/app.ts",
-    "deploy": "node helperScripts/deploy-commands.js",
-    "retract": "node helperScripts/retract-commands.js"
+    "deploy": "ts-node --esm helperScripts/deploy-commands.ts",
+    "retract": "ts-node --esm helperScripts/retract-commands.ts"
   },
   "repository": {
     "type": "git",
