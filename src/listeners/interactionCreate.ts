@@ -52,8 +52,6 @@ async function handleSelectMenu(interaction: SelectMenuInteraction): Promise<voi
 }
 
 async function handleAutocomplete(interaction: AutocompleteInteraction): Promise<void> {
-  console.log(interaction.commandName);
-  console;
   const command = AutocompleteCommandList.get(interaction.commandName);
   if (!command) {
     return;

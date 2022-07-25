@@ -11,13 +11,12 @@ import {
   SelectMenuInteraction
 } from 'discord.js';
 import {Autocomplete, SelectSlashCommand} from '../../SlashCommand.js';
-import Challenges from './Challenge.js';
-import {Champions} from './Champion.js';
+import {Challenges, Champions} from './Challenge.js';
 
 const LeagueChallenges: SelectSlashCommand & Autocomplete = {
   data: new SlashCommandBuilder()
       .setName('league-challenge')
-      .setDescription('Get info about league challenges')
+      .setDescription('Get info about league challenges!')
       .addSubcommand(subcommand => {
         return subcommand.setName('champ')
             .setDescription('Get all the challenges a champ is in to')
@@ -25,7 +24,7 @@ const LeagueChallenges: SelectSlashCommand & Autocomplete = {
               return option.setName('champion')
                   .setDescription('The name of the champion to query')
                   .setAutocomplete(true)
-                  .setRequired(true);
+                  .setRequired(false);
             });
       })
       .addSubcommand(subcommand => {
@@ -33,22 +32,33 @@ const LeagueChallenges: SelectSlashCommand & Autocomplete = {
             .setDescription('Get the champions in the intersection of any number of challenges');
       }),
 
-  execute: async (interaction: ChatInputCommandInteraction): Promise<void> => {
+  execute: async (interaction: ChatInputCommandInteraction): Promise<any> => {
     if (interaction.options.getSubcommand() === 'champ') {
-      const championsChallenges: string[] = [];
-      Array.from(Challenges.entries()).forEach(challenge => {
-        const challengeName = challenge[0];
-        const isAccepted = new Set(challenge[1]).has(interaction.options.getString('champion')?.toUpperCase() ?? '');
+      const champOption = interaction.options.getString('champion');
+      if (!champOption) {
+        const responseContent =
+            `Listing all champion\'s challenges: \n ${
+                Array.from(Champions.entries())
+                    .sort((a, b) => {
+                      return a[1].length >= b[1].length ? -1 : 1;
+                    })
+                    .map((value) => {
+                      return `**${value[0]}**: (${value[1].length})`;
+                    })
+                    .slice(0, 15)
+                    .join('\n')
+            }`;
 
-        if (isAccepted) {
-          championsChallenges.push(challengeName);
-        }
-      });
+        return interaction.reply({
+          ephemeral: false,
+          content: responseContent
+        });
+      }
       await interaction.reply({
         ephemeral: false,
-        content: `${interaction.options.getString('champion')} can be used to complete: \n ${championsChallenges.join(
+        content: `${interaction.options.getString('champion')} can be used to complete: \n ${Champions.get(
+            interaction.options.getString('champion')?.toUpperCase() || '')?.join(
             ', ')}`,
-        components: []
       });
       return;
     }
@@ -59,13 +69,16 @@ const LeagueChallenges: SelectSlashCommand & Autocomplete = {
                 .setPlaceholder('Nothing Selected')
                 .setMinValues(1)
                 .setMaxValues(10)
-                .addOptions(Array.from(Challenges.keys()).map(cName => {
-                  return {
-                    label: cName,
-                    description: ' ',
-                    value: cName
-                  } as APISelectMenuOption;
-                }))
+                .addOptions(
+                    Array.from(Challenges.keys())
+                        .sort()
+                        .map(cName => {
+                          return {
+                            label: cName,
+                            description: ' ',
+                            value: cName
+                          } as APISelectMenuOption;
+                        }))
         );
     await interaction.reply({
       ephemeral: false,
@@ -75,7 +88,6 @@ const LeagueChallenges: SelectSlashCommand & Autocomplete = {
   },
 
   async update(interaction: SelectMenuInteraction): Promise<any> {
-
     let allowedChamps: string[] = Challenges.get(interaction.values[0]) ?? [];
     for (let i = 1; i < interaction.values.length; i++) {
       const nextChallengeChamps = new Set(Challenges.get(interaction.values[i]));
@@ -90,11 +102,9 @@ const LeagueChallenges: SelectSlashCommand & Autocomplete = {
   customId: 'selectLeagueChallenge',
 
   async autocomplete(interaction: AutocompleteInteraction): Promise<any> {
-    console.log(interaction);
     if (interaction.options.getSubcommand() === 'champ') {
       const focusedValue = interaction.options.getFocused().toUpperCase();
-      const filtered = Champions.filter(choice => choice.startsWith(focusedValue)).slice(0, 10);
-      console.log(filtered);
+      const filtered = Array.from(Champions.keys()).filter(choice => choice.startsWith(focusedValue)).slice(0, 10);
       await interaction.respond(
           filtered.map(choice => ({name: choice, value: choice})),
       );
