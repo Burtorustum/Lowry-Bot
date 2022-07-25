@@ -1,12 +1,12 @@
 import {REST} from "@discordjs/rest";
 import {Routes} from 'discord-api-types/v10';
 import {config} from "dotenv";
-import CommandList from '../src/CommandList.js';
+import {SlashCommandList} from '../src/SlashCommandList.js';
 
 config();
 
 const commands = [];
-for (const command of CommandList.values()) {
+for (const command of SlashCommandList.values()) {
   commands.push(command.data.toJSON());
 }
 
