@@ -1,9 +1,9 @@
 import {SlashCommandBuilder} from '@discordjs/builders';
 import {ChatInputCommandInteraction, InteractionResponse} from 'discord.js';
-import {Command} from '../Command.js';
 import CounterModel from '../database/counter-model.js';
+import {SlashCommand} from '../SlashCommand.js';
 
-const Counter: Command = {
+const Counter: SlashCommand = {
   data: new SlashCommandBuilder()
       .setName('counter')
       .setDescription('create, increment, or decrement a counter')

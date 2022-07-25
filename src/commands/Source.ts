@@ -1,8 +1,8 @@
 import {SlashCommandBuilder} from '@discordjs/builders';
 import {ChatInputCommandInteraction, InteractionResponse} from 'discord.js';
-import {Command} from '../Command.js';
+import {SlashCommand} from '../SlashCommand.js';
 
-const Source: Command = {
+const Source: SlashCommand = {
   data: new SlashCommandBuilder()
       .setName('source')
       .setDescription('Links to the repo'),
