@@ -1,9 +1,9 @@
 import {SlashCommandBuilder} from '@discordjs/builders';
-import {ChatInputCommandInteraction, InteractionResponse} from 'discord.js';
+import {AutocompleteInteraction, ChatInputCommandInteraction, InteractionResponse} from 'discord.js';
 import CounterModel from '../database/counter-model.js';
-import {SlashCommand} from '../SlashCommand.js';
+import {Autocomplete, SlashCommand} from '../SlashCommand.js';
 
-const Counter: SlashCommand = {
+const Counter: SlashCommand & Autocomplete = {
   data: new SlashCommandBuilder()
       .setName('counter')
       .setDescription('create, increment, or decrement a counter')
@@ -13,6 +13,7 @@ const Counter: SlashCommand = {
             .addStringOption(option => {
               return option.setName('name')
                   .setDescription('name of counter to be created')
+                  .setAutocomplete(true)
                   .setRequired(true);
             })
             .addStringOption(option => {
@@ -32,6 +33,7 @@ const Counter: SlashCommand = {
             .addStringOption(option => {
               return option.setName('name')
                   .setDescription('name of counter to fetch value of')
+                  .setAutocomplete(true)
                   .setRequired(true);
             });
       })
@@ -41,6 +43,7 @@ const Counter: SlashCommand = {
             .addStringOption(option => {
               return option.setName('name')
                   .setDescription('name of counter to increment')
+                  .setAutocomplete(true)
                   .setRequired(true);
             })
             .addIntegerOption(option => {
@@ -55,6 +58,7 @@ const Counter: SlashCommand = {
             .addStringOption(option => {
               return option.setName('name')
                   .setDescription('name of counter to decrement')
+                  .setAutocomplete(true)
                   .setRequired(true);
             })
             .addIntegerOption(option => {
@@ -62,11 +66,15 @@ const Counter: SlashCommand = {
                   .setDescription('integer to decrement the counter by')
                   .setRequired(false);
             });
+      })
+      .addSubcommand(subcommand => {
+        return subcommand.setName('list')
+            .setDescription('list all created counters');
       }),
 
   execute: async (interaction: ChatInputCommandInteraction): Promise<InteractionResponse> => {
     if (interaction.options.getSubcommand() === 'create') {
-      const counterName = interaction.options.getString('name');
+      const counterName = interaction.options.getString('name')?.toLowerCase();
       const counterDescription = interaction.options.getString('description');
       let initialVal = interaction.options.getInteger('initial') ?? 0;// nullish coalescing -- deals with optional input
 
@@ -86,6 +94,10 @@ const Counter: SlashCommand = {
         return interaction.reply(
             {content: 'Something went wrong with adding a counter: tell rob he sucks', ephemeral: true});
       }
+    } else if (interaction.options.getSubcommand() === 'list') {
+      const counterList = await CounterModel.findAll({attributes: ['name']});
+      const tagString = counterList.map(m => m.get('name')).join('\n - ') || 'No counters created.';
+      return interaction.reply({content: `All Counters: \n - ${tagString}`, ephemeral: true});
     } else {
       const countName = interaction.options.getString('name');
       const val = interaction.options.getInteger('val') ?? 1;
@@ -93,7 +105,9 @@ const Counter: SlashCommand = {
       const counter = await CounterModel.findOne({where: {name: countName}});
       if (counter) {
         if (interaction.options.getSubcommand() === 'get') {
-          return interaction.reply('Count of ' + countName + ': ' + await counter.get('count'));
+          return interaction.reply(
+              `**Value:** ${await counter.get('count')}\n**Name:** ${countName}\n**Description:** ${await counter.get(
+                  'description')}`);
         } else if (interaction.options.getSubcommand() === 'increment') {
           await counter.increment('count', {by: (val)});
           return interaction.reply(
@@ -110,6 +124,19 @@ const Counter: SlashCommand = {
 
       return interaction.reply({content: `No counter with name \"${countName}\"`, ephemeral: true});
     }
+  },
+
+  async autocomplete(interaction: AutocompleteInteraction): Promise<any> {
+    //if (interaction.options.getFocused() === 'name') {
+    console.log();
+    const counters = await CounterModel.findAll({attributes: ['name']});
+    const counterNames = counters.map(m => (m.get('name') as string).toLowerCase());
+    const focusedValue = interaction.options.getFocused().toLowerCase();
+    const filtered = counterNames.filter(choice => choice.startsWith(focusedValue)).slice(0, 10);
+    await interaction.respond(
+        filtered.map(choice => ({name: choice, value: choice}))
+    );
+    //}
   }
 };
 

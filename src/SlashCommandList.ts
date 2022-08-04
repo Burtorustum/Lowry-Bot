@@ -16,5 +16,6 @@ SelectCommandList.set(LeagueChallenges.customId, LeagueChallenges);
 
 const AutocompleteCommandList = new Collection<string, Autocomplete>();
 AutocompleteCommandList.set(LeagueChallenges.data.name, LeagueChallenges);
+AutocompleteCommandList.set(Counter.data.name, Counter);
 
 export {SlashCommandList, SelectCommandList, AutocompleteCommandList};

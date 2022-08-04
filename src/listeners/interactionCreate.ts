@@ -6,11 +6,11 @@ import {
   InteractionType,
   SelectMenuInteraction,
   TextChannel
-} from "discord.js";
+} from 'discord.js';
 import {AutocompleteCommandList, SelectCommandList, SlashCommandList} from '../SlashCommandList.js';
 
 export default (client: Client): void => {
-  client.on("interactionCreate", async (interaction: Interaction) => {
+  client.on('interactionCreate', async (interaction: Interaction) => {
     if (interaction.isChatInputCommand()) {
       await handleSlashCommand(interaction);
     } else if (interaction.isSelectMenu()) {
@@ -44,11 +44,9 @@ async function handleSelectMenu(interaction: SelectMenuInteraction): Promise<voi
   if (!command) {
     return;
   }
-
   console.log(
       `Handling selection from ${interaction.user} in #${(interaction.channel as TextChannel).name}:${interaction.guild}`);
-  command.update(interaction)
-      .then(() => console.log('Finished Handling'));
+  command.update(interaction).then(() => console.log('Finished Handling'));
 }
 
 async function handleAutocomplete(interaction: AutocompleteInteraction): Promise<void> {
@@ -56,7 +54,5 @@ async function handleAutocomplete(interaction: AutocompleteInteraction): Promise
   if (!command) {
     return;
   }
-
   await command.autocomplete(interaction);
-
 }
