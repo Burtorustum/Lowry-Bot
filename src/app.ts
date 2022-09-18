@@ -1,5 +1,5 @@
-import {ActivityType, Client, IntentsBitField} from "discord.js";
-import {config} from "dotenv";
+import {ActivityType, Client, IntentsBitField} from 'discord.js';
+import {config} from 'dotenv';
 import interactionCreate from './listeners/interactionCreate.js';
 import messageCreate from './listeners/messageCreate.js';
 import ready from './listeners/ready.js';
@@ -12,7 +12,7 @@ const client: Client = new Client({
     afk: false,
     activities: [{
       name: 'Searching for my scissors ✂️',
-      type: ActivityType.Playing,
+      type: ActivityType.Playing
     }]
   }
 });
@@ -23,3 +23,5 @@ interactionCreate(client);
 messageCreate(client);
 // Login
 client.login(process.env.DISCORD_TOKEN);
+
+export {client};

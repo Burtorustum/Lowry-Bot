@@ -1,6 +1,6 @@
 import {SlashCommandBuilder} from '@discordjs/builders';
 import {AutocompleteInteraction, ChatInputCommandInteraction, InteractionResponse} from 'discord.js';
-import CounterModel from '../database/counter-model.js';
+import CounterModel from '../database/models/counter-model.js';
 import {Autocomplete, SlashCommand} from '../SlashCommand.js';
 
 const Counter: SlashCommand & Autocomplete = {

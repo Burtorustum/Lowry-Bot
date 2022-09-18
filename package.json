@@ -7,7 +7,8 @@
   "scripts": {
     "start": "nodemon src/app.ts",
     "deploy": "ts-node --esm helperScripts/deploy-commands.ts",
-    "retract": "ts-node --esm helperScripts/retract-commands.ts"
+    "retract": "ts-node --esm helperScripts/retract-commands.ts",
+    "dbInit": "ts-node --esm helperScripts/dbInit.ts"
   },
   "repository": {
     "type": "git",
