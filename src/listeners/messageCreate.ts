@@ -23,9 +23,7 @@ export default (client: Client): void => {
     if (message.content.includes('tenor.com/')) {
       if (!await GIFModel.findOne({where: {url: message.content}})) {
         console.log(`User ${message.author.username} sent a unique gif! Awarding 25 monocoins`);
-        message.reply(
-            `This is a unique Tenor GIF! 25 <:monocoin:1015842384816394260> awarded`
-        );
+        message.react('<:monocoin:1015842384816394260>');
         await GIFModel.create({url: message.content});
         // @ts-ignore
         currency.add(message.author.id, 25);
