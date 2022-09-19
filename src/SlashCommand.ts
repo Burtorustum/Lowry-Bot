@@ -2,9 +2,10 @@ import {SlashCommandBuilder} from '@discordjs/builders';
 import {
   AutocompleteInteraction,
   ChatInputCommandInteraction,
+  ModalSubmitInteraction,
   SelectMenuInteraction,
   SlashCommandSubcommandsOnlyBuilder
-} from "discord.js";
+} from 'discord.js';
 
 export interface SlashCommand {
   data: SlashCommandBuilder | SlashCommandSubcommandsOnlyBuilder;
@@ -18,4 +19,9 @@ export interface SelectSlashCommand extends SlashCommand {
 
 export interface Autocomplete {
   autocomplete: (interaction: AutocompleteInteraction) => Promise<any>;
+}
+
+export interface Modal {
+  handleResponse: (interaction: ModalSubmitInteraction) => Promise<any>;
+  customId: string;
 }
