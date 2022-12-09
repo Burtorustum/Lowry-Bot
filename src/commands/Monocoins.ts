@@ -1,5 +1,5 @@
-import {SlashCommandBuilder} from '@discordjs/builders';
-import {ChatInputCommandInteraction, Formatters, InteractionResponse} from 'discord.js';
+import {blockQuote, SlashCommandBuilder} from '@discordjs/builders';
+import {ChatInputCommandInteraction, InteractionResponse} from 'discord.js';
 import {Op} from 'sequelize';
 import {client} from '../app.js';
 import {currency, CurrencyShop, Users} from '../database/dbObjects.js';
@@ -160,23 +160,23 @@ const Monocoins: SlashCommand = {
       const items = await CurrencyShop.findAll();
       // @ts-ignore
       return interaction.reply(
-          Formatters.blockQuote('WIP!! DONT BUY THINGS\n' + items.map(
+          blockQuote('WIP!! DONT BUY THINGS\n' + items.map(
               // @ts-ignore
               i => `**${i.name}**: ${i.cost} <:monocoin:1015842384816394260>`).join('\n')));
     }
 
     return interaction.reply(
-        Formatters.codeBlock(
+        blockQuote(
             // @ts-ignore
             currency.sort((a, b) => b.balance - a.balance)
+            // @ts-ignore
+            .filter(user => client.users.cache.has(user.user_id))
+            .first(10)
+            // @ts-ignore
+            .map((user, position) => `(${position + 1}) ${(client.users.cache.get(
                 // @ts-ignore
-                .filter(user => client.users.cache.has(user.user_id))
-                .first(10)
-                // @ts-ignore
-                .map((user, position) => `(${position + 1}) ${(client.users.cache.get(
-                    // @ts-ignore
-                    user.user_id).tag)}: ${user.balance} :monocoin:`)
-                .join('\n')
+                user.user_id).tag)}: ${user.balance} <:monocoin:1015842384816394260>`)
+            .join('\n')
         )
     );
   }

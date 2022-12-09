@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="29264a5f-e037-45f5-90da-dc6b103ad085" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/Monocoins.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/Monocoins.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/league/challenge-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/league/challenge-info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/dbObjects.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/dbObjects.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GitRewordedCommitMessages">
+    <option name="onto" value="1cf1ef5612b414f187230f8de15e025d9c5f1e79" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1663493542" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="monocoins" />
+                    <option name="lastUsedInstant" value="1663490208" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="16-overhaul-jest-+-helper-functions-for-common-tasks" />
+                    <option name="lastUsedInstant" value="1659626721" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="main" />
+      </list>
+    </option>
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="d4132caf-ef16-4806-a0ed-bd00fb8f95e8" />
+        <option name="url" value="https://github.com/Burtorustum/Lowry-Bot.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/nodemon.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/package.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/app.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/commands/Counter.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/commands/league/LeagueChallenges.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/listeners/messageCreate.ts" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/tsconfig.json" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="JsBowerSettings">
+    <bower-package value="" />
+    <bower.json value="" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2CH0qgPA5F7eoFsqkyd5sr2fX1M" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Project.color&quot;: &quot;190021&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TODO_SCOPE&quot;: &quot;All Places&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.16.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.18.7&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Burtorustum/Documents/CS Projects/Lowry-Bot/src/commands&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Burtorustum\\Documents\\CS Projects\\Lowry-Bot\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Burtorustum\Documents\CS Projects\Lowry-Bot\src\commands" />
+      <recent name="C:\Users\Burtorustum\Documents\CS Projects\Lowry-Bot\src\database\models" />
+      <recent name="C:\Users\Burtorustum\Documents\CS Projects\Lowry-Bot" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Burtorustum\Documents\CS Projects\Lowry-Bot\src\database\models" />
+      <recent name="C:\Users\Burtorustum\Documents\CS Projects\Lowry-Bot" />
+      <recent name="C:\Users\Burtorustum\Documents\CS Projects\Lowry-Bot\src" />
+      <recent name="C:\Users\Burtorustum\Documents\CS Projects\Lowry-Bot\src\database\currency" />
+      <recent name="C:\Users\Burtorustum\Documents\CS Projects\Lowry-Bot\helperScripts" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.update">
+    <configuration name="dbInit" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dbInit" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="deploy" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="deploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="retract" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="retract" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="singlestart" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="singlestart" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="update" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="update" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="npm.update" />
+      <item itemvalue="npm.start" />
+      <item itemvalue="npm.singlestart" />
+      <item itemvalue="npm.deploy" />
+      <item itemvalue="npm.retract" />
+      <item itemvalue="npm.dbInit" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="29264a5f-e037-45f5-90da-dc6b103ad085" name="Changes" comment="" />
+      <created>1658444394224</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1658444394224</updated>
+      <workItem from="1658444395400" duration="990000" />
+      <workItem from="1658445401671" duration="10858000" />
+      <workItem from="1658459609721" duration="8858000" />
+      <workItem from="1658493702426" duration="19920000" />
+      <workItem from="1658554147366" duration="3697000" />
+      <workItem from="1658596110428" duration="264000" />
+      <workItem from="1658596386996" duration="30823000" />
+      <workItem from="1658685322648" duration="216000" />
+      <workItem from="1658685550641" duration="27469000" />
+      <workItem from="1659030872936" duration="1355000" />
+      <workItem from="1659211958231" duration="2791000" />
+      <workItem from="1659250582317" duration="3045000" />
+      <workItem from="1659398226496" duration="624000" />
+      <workItem from="1659560098134" duration="15265000" />
+      <workItem from="1659619138370" duration="1824000" />
+      <workItem from="1659639725384" duration="35000" />
+      <workItem from="1659639768958" duration="428000" />
+      <workItem from="1659712774895" duration="1099000" />
+      <workItem from="1659717322311" duration="810000" />
+      <workItem from="1659723181584" duration="961000" />
+      <workItem from="1659757868998" duration="1195000" />
+      <workItem from="1659807438710" duration="8327000" />
+      <workItem from="1660154146141" duration="604000" />
+      <workItem from="1660335493951" duration="1196000" />
+      <workItem from="1661398838324" duration="4856000" />
+      <workItem from="1661555966835" duration="3849000" />
+      <workItem from="1661868596976" duration="1622000" />
+      <workItem from="1661876781018" duration="1129000" />
+      <workItem from="1662026426342" duration="41000" />
+      <workItem from="1662066363050" duration="1782000" />
+      <workItem from="1662068161990" duration="931000" />
+      <workItem from="1662069102910" duration="5650000" />
+      <workItem from="1662132669432" duration="5218000" />
+      <workItem from="1662177184012" duration="595000" />
+      <workItem from="1662264920788" duration="3229000" />
+      <workItem from="1662301391536" duration="5000" />
+      <workItem from="1662320691661" duration="860000" />
+      <workItem from="1662369220387" duration="202000" />
+      <workItem from="1662600559808" duration="1278000" />
+      <workItem from="1663490115522" duration="5010000" />
+      <workItem from="1663496171927" duration="134000" />
+      <workItem from="1663542556262" duration="9269000" />
+      <workItem from="1663600921775" duration="2069000" />
+      <workItem from="1670614834964" duration="99000" />
+      <workItem from="1670614943315" duration="39000" />
+      <workItem from="1670614988512" duration="1472000" />
+      <workItem from="1670616513121" duration="243000" />
+      <workItem from="1670616774372" duration="70000" />
+      <workItem from="1670617345731" duration="494000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial Commit">
+      <created>1658493467414</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1658493467414</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added source command">
+      <created>1658493513471</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1658493513471</updated>
+    </task>
+    <task id="LOCAL-00003" summary="made source ephemeral">
+      <created>1658493575262</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1658493575262</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fixed ephemeral replies">
+      <created>1658497020934</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1658497020934</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Centralized event and command handling to simplify implementation + logging as application grows">
+      <created>1658526010833</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1658526010833</updated>
+    </task>
+    <task id="LOCAL-00006" summary="README">
+      <created>1658529307779</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1658529307779</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Fixes #2">
+      <created>1658556773246</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1658556773246</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Workflow to auto add new issues to the project">
+      <created>1658598634468</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1658598634468</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Workflow to auto add new issues to the project">
+      <created>1658598906149</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1658598906149</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Standardize templates">
+      <created>1658599336460</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1658599336460</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Standardize issue templates">
+      <created>1658599347118</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1658599347118</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Refractor all files to ts and fix compilation issues">
+      <created>1658681017143</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1658681017143</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Fix helper scripts to work with new file layout">
+      <created>1658681583062</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1658681583062</updated>
+    </task>
+    <task id="LOCAL-00014" summary="implemented basics of #8main">
+      <created>1658707744104</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1658707744104</updated>
+    </task>
+    <task id="LOCAL-00015" summary="implemented basics of #8">
+      <created>1658707888609</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1658707888609</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Update gitignore to include sqlite db">
+      <created>1658708081376</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1658708081376</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Implemented pre-computing for champion data + cleaned up">
+      <created>1658711613319</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1658711613319</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Implemented pre-computing for champion data + cleaned up. #8">
+      <created>1658711711902</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1658711711902</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Automated counting + autocomplete for counter names #10">
+      <created>1659586592650</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1659586592650</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Add currency system and basic ways of getting monocoins">
+      <created>1663493523305</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1663493523305</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Add currency system and basic ways of getting monocoins">
+      <created>1663495547793</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1663495547793</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Merge remote-tracking branch 'origin/main'">
+      <created>1663495648643</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1663495648643</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Add currency system and basic ways of getting monocoins">
+      <created>1663496011223</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1663496011223</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Schrodinger game list command finished">
+      <created>1663565216653</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1663565216653</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Schrodinger game list command finished">
+      <created>1663600934228</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1663600934228</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/database/define-sequelize-model.js" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="BEK_SORT_TYPE" value="1" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Initial Commit" />
+    <MESSAGE value="Added source command" />
+    <MESSAGE value="made source ephemeral" />
+    <MESSAGE value="fixed ephemeral replies" />
+    <MESSAGE value="Centralized event and command handling to simplify implementation + logging as application grows" />
+    <MESSAGE value="README" />
+    <MESSAGE value="Fixes #2" />
+    <MESSAGE value="Workflow to auto add new issues to the project" />
+    <MESSAGE value="Standardize templates" />
+    <MESSAGE value="Standardize issue templates" />
+    <MESSAGE value="Refractor all files to ts and fix compilation issues" />
+    <MESSAGE value="Fix helper scripts to work with new file layout" />
+    <MESSAGE value="implemented basics of #8main" />
+    <MESSAGE value="implemented basics of #8" />
+    <MESSAGE value="Update gitignore to include sqlite db" />
+    <MESSAGE value="Implemented pre-computing for champion data + cleaned up" />
+    <MESSAGE value="Implemented pre-computing for champion data + cleaned up. #8" />
+    <MESSAGE value="Automated counting + autocomplete for counter names #10" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
+    <MESSAGE value="Add currency system and basic ways of getting monocoins" />
+    <MESSAGE value="Schrodinger game list command finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="Schrodinger game list command finished" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
